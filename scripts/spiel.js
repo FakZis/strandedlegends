@@ -25,7 +25,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " schlägt " + convertToWord(computerChoice) + " <br>Du hast gesiegt! ";
+    result_p.innerHTML = convertToWord(userChoice) + " schlägt " + convertToWord(computerChoice) + " <br>Sieg! ";
     userChoice_div.classList.add('green-glow');
     setTimeout(function() { userChoice_div.classList.remove('green-glow') }, 450);
 }
@@ -35,14 +35,14 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " verliert gegen " + convertToWord(computerChoice) + "<br>Du hast verloren!";
+    result_p.innerHTML = convertToWord(userChoice) + " verliert gegen " + convertToWord(computerChoice) + "<br>Niederlage!";
     userChoice_div.classList.add('red-glow');
     setTimeout(function() { userChoice_div.classList.remove('red-glow') }, 450);
 }
 
 function draw(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = convertToWord(userChoice) + " gegen " + convertToWord(computerChoice) + " <br>Es ist ein Unentschieden!";
+    result_p.innerHTML = convertToWord(userChoice) + " gegen " + convertToWord(computerChoice) + " <br>Unentschieden!";
     userChoice_div.classList.add('grey-glow');
     setTimeout(function() { userChoice_div.classList.remove('grey-glow') }, 450);
 }
